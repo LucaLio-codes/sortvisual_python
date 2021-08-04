@@ -3,10 +3,10 @@ import sys
 import random
 import time
 from arrayvisualizer import ArrayVisualize
-from Sorters.insertion import InsertionSort
+from Sorters.sorter import QuickSort
 
-N = 300
-W = 5
+N = 600
+W = 2
 BLACK = 0, 0, 0
 
 
@@ -16,7 +16,7 @@ def mainloop():
     screen = pygame.display.set_mode((N * W, N))
     screen.fill(BLACK)
     visualizer = ArrayVisualize(data, screen, W)
-    sorter = InsertionSort(data)
+    sorter = QuickSort(data)
     start = False
 
     while True:
