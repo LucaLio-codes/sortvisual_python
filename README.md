@@ -27,3 +27,11 @@ This demo only serves to demonstrate how each algorithm works.
 
 ### MergeSort
 ![MergeSort](gifs/merge.gif)
+
+## TODO
+- Add more algorithms
+- allow for static data (not just random)
+- allow for arraysize change in runtime
+- add menu 
+- dynamic window scalling
+- sound effects?
