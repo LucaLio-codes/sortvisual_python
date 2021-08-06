@@ -13,7 +13,7 @@ class QuickSort(Sorter):
         self.quick(0, len(self.data)-1)
 
     def quick(self, lo, hi):
-        if hi - lo > 1:
+        if hi - lo >= 1:
             if lo < hi:
                 p = self.partition(lo, hi)
                 self.quick(lo, p-1)
@@ -29,11 +29,11 @@ class QuickSort(Sorter):
                 i = i+1
                 self.swap(i, j)
         self.swap(i+1, hi)
-        return i
+        return i + 1
 
 
 if __name__ == '__main__':
-    data = [i for i in range(100)]
+    data = [i for i in range(10)]
     random.shuffle(data)
     print(data)
     dut = QuickSort(data)

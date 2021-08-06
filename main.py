@@ -3,6 +3,7 @@ import sys
 import random
 from sorters.bubble import BubbleSort
 from sorters.insertion import InsertionSort
+from sorters.quick import QuickSort
 
 N = 600
 W = 3
@@ -26,7 +27,7 @@ class Visualizer:
         self.screen = pygame.display.set_mode((N * W, N + 40))
         self.screen.fill(BLACK)
         self.displayData = self.data.copy()
-        self.sorter = InsertionSort(self.data)
+        self.sorter = QuickSort(self.data)
         self.visualizeData()
         self.drawLegend((str(self.sorter), 0, 0, 0))
         self.op = 0
@@ -67,7 +68,7 @@ class Visualizer:
                 sys.exit()
             if event.type == pygame.KEYDOWN and event.key == 32:
                 self.shuffle()
-                self.sorter = InsertionSort(self.data)
+                self.sorter = QuickSort(self.data)
                 self.time = self.sorter.getTimeMs()
                 self.drawLegend((str(self.sorter), self.time, 0, 0))
             if event.type == pygame.KEYDOWN and event.key == 13:
