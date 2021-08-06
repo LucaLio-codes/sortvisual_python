@@ -35,3 +35,4 @@ This demo only serves to demonstrate how each algorithm works.
 - add menu 
 - dynamic window scalling
 - sound effects?
+- Sorting lines of a Picture instead of Different height bars
